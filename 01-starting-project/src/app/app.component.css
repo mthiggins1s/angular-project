@@ -1,0 +1,38 @@
+#songs {
+    list-style: none;
+    margin: 0;
+    margin-left: 10rem;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    overflow: auto;
+    border-radius: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  #fallback {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin: 0;
+    text-align: left;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+      margin: 4rem auto;
+      grid-template-columns: 1fr 3fr;
+    }
+  
+    #songs {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    #fallback {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
