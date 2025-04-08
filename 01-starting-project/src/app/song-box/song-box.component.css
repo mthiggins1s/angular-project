@@ -1,0 +1,44 @@
+.box {
+  width: 300px;
+  padding: 20px;
+  background-color: #1e1e2f;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc400;
+}
+
+.box-content {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffc400;
+  box-shadow: 0 0 5px #ffc400, 0 0 10px #ffc400, 0 0 20px #ffc400;
+  animation: glowBar 2s ease-in-out infinite;
+}
+
+@keyframes glowBar {
+  0% {
+    box-shadow: 0 0 1px #ffc400, 0 0 1px #ffc400;
+  }
+  50% {
+    box-shadow: 0 0 5px #ffc400, 0 0 10px #ffc400, 0 0 20px #ffc400;
+  }
+  100% {
+    box-shadow: 0 0 1px #ffc400, 0 0 1px #ffc400;
+  }
+}

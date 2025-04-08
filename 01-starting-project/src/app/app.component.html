@@ -1,21 +1,22 @@
 <app-header />
-
-<main>
-  <ul id="songs">
-    <li>
-      <app-songs [cover]="songs[0].cover" [title]="songs[0].title" />
-    </li>
-    <li>
-      <app-songs [cover]="songs[1].cover" [title]="songs[1].title" />
-    </li>
-    <li>
-      <app-songs [cover]="songs[2].cover" [title]="songs[2].title" />
-    </li>
-    <li>
-      <app-songs [cover]="songs[3].cover" [title]="songs[3].title" />
-    </li>
-    <li>
-      <app-songs [cover]="songs[4].cover" [title]="songs[4].title" />
-    </li>
-  </ul>
-</main>
+<app-song-box>
+  <main>
+    <ul id="songs">
+      <li>
+        <app-songs [cover]="songs[0].cover" [title]="songs[0].title" />
+      </li>
+      <li>
+        <app-songs [cover]="songs[1].cover" [title]="songs[1].title" />
+      </li>
+      <li>
+        <app-songs [cover]="songs[2].cover" [title]="songs[2].title" />
+      </li>
+      <li>
+        <app-songs [cover]="songs[3].cover" [title]="songs[3].title" />
+      </li>
+      <li>
+        <app-songs [cover]="songs[4].cover" [title]="songs[4].title" />
+      </li>
+    </ul>
+  </main>
+</app-song-box>

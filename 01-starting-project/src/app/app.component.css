@@ -1,16 +1,18 @@
 #songs {
-    list-style: none;
-    margin: 0;
-    margin-left: 10rem;
-    padding: 0;
-    display: flex;
-    gap: 0.5rem;
-    overflow: auto;
-    border-radius: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  }
+  list-style: none;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  display: flex;
+  gap: 0.5rem;
+  overflow: hidden; /* Prevent the scrollbar */
+  border-radius: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%; /* Ensure the list takes full width */
+}
+
+
   
   #fallback {
     font-weight: bold;

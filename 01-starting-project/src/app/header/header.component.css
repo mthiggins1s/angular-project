@@ -1,50 +1,74 @@
 .app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(to right, #1e1e2f, #2a2a40);
-    color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    animation: slideIn 1s ease-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #1e1e2f, #2a2a40);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-out;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ffc400;
+    box-shadow: 0 0 5px #ffc400, 0 0 10px #ffc400, 0 0 20px #ffc400;
+    animation: glowBar 2s ease-in-out infinite;
   }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #f0f0f0;
-    animation: pulse 2.5s infinite;
+}
+
+@keyframes glowBar {
+  0% {
+    box-shadow: 0 0 1px #ffc400, 0 0 1px #ffc400;
   }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  
-    .nav-item {
-      text-decoration: none;
-      color: #cfcfcf;
-      position: relative;
-      font-weight: 500;
-      transition: color 0.3s;
-  
-      &:hover {
-        color: #ffc400;
-      }
-  
-      &::after {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        background-color: #ffc400;
-        bottom: -4px;
-        left: 0;
-        transition: width 0.3s ease;
-      }
-  
-      &:hover::after {
-        width: 100%;
-      }
+  50% {
+    box-shadow: 0 0 1px #ffc400, 0 0 1dvi #ffc400;
+  }
+  100% {
+    box-shadow: 0 0 1px #ffc400, 0 0 1px #ffc400;
+  }
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  animation: pulse 2.5s infinite;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+
+  .nav-item {
+    text-decoration: none;
+    color: #cfcfcf;
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ffc400;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ffc400;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
-  
+}
