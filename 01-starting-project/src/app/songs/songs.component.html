@@ -1,6 +1,9 @@
 <div>
-  <button>
-    <img />
+  <button (click)="onSongClick()" >
+    <img
+      [src]="imagePath"
+      [alt]="selectedSong.title"
+    />
     <span>{{ selectedSong.title }}</span>
   </button>
 </div>
