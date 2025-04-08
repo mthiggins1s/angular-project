@@ -11,5 +11,5 @@ import { SONG_LIST } from "./songs-list";
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  songs = SONG_LIST
+  songs = SONG_LIST;
 }

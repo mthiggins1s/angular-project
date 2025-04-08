@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, Input, input } from '@angular/core';
 
 
 @Component({
@@ -9,12 +9,13 @@ import { Component, Input } from '@angular/core';
   styleUrl: './songs.component.css'
 })
 export class SongsComponent {
-  @Input({required: true}) cover!: string;
-  @Input({required: true}) title!: string;
+  // using signal inputs
+  cover = input.required<string>();
+  title = input.required<string>();
 
-  get imagePath() {
-    return 'assets/album-covers/' + this.cover;
-  }
+  imagePath = computed(() => {
+    return 'assets/album-covers/' + this.cover();
+  });
 
   onSongClick() {}
 }

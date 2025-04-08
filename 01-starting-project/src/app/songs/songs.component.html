@@ -1,6 +1,6 @@
 <div>
   <button (click)="onSongClick()">
-    <img [src]="imagePath" [alt]="title" />
-    <span>{{ title }}</span>
+    <img [src]="imagePath()" [alt]="title()" />
+    <span>{{ title() }}</span>
   </button>
 </div>
