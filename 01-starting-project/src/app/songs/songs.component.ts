@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { SONG_LIST } from '../songs-list';
+import { Component, Input } from '@angular/core';
 
-const randomIndex = Math.floor(Math.random() * SONG_LIST.length);
 
 @Component({
   selector: 'app-songs',
@@ -11,17 +9,12 @@ const randomIndex = Math.floor(Math.random() * SONG_LIST.length);
   styleUrl: './songs.component.css'
 })
 export class SongsComponent {
-  // variable with a value of a song being drawn randomly
-  selectedSong = SONG_LIST[randomIndex];
-
+  @Input({required: true}) cover!: string;
+  @Input({required: true}) title!: string;
 
   get imagePath() {
-    // you add 'this.' to access the class to where the getter belongs to
-    return 'assets/album-covers/' + this.selectedSong.cover
+    return 'assets/album-covers/' + this.cover;
   }
 
-  onSongClick() {
-    const randomIndex = Math.floor(Math.random() * SONG_LIST.length);
-    this.selectedSong = SONG_LIST[randomIndex];
-  }
+  onSongClick() {}
 }
