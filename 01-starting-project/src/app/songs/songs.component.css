@@ -4,7 +4,7 @@ button {
   gap: 0.5em;
   background: transparent;
   margin-left: 3em;
-  border: 1px solid #ccc;
+  border: 3px solid #187795;;
   color: #ffffff;
   padding: 0.5em 1em;
   font: 500 1rem system-ui, sans-serif;
@@ -16,9 +16,9 @@ button {
 button:hover,
 button:active,
 .active {
-  background-color: #f0f0f0;
-  border-color: #aaa;
-  color: #000;
+  background-color: #ffffff;
+  border-color: #2589BD;
+  color: #000000;
 }
 
 img {
