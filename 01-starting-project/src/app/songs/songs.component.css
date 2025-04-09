@@ -3,6 +3,7 @@ button {
   align-items: center;
   gap: 0.5em;
   background: transparent;
+  margin-left: 3em;
   border: 1px solid #ccc;
   color: #ffffff;
   padding: 0.5em 1em;
