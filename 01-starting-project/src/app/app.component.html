@@ -3,20 +3,47 @@
   <main>
     <ul id="songs">
       <li>
-        <app-songs [cover]="songs[0].cover" [title]="songs[0].title" />
+        <app-songs
+          [id]="songs[0].id"
+          [cover]="songs[0].cover"
+          [title]="songs[0].title"
+          (select)="onSelectSong($event)"
+        />
       </li>
       <li>
-        <app-songs [cover]="songs[1].cover" [title]="songs[1].title" />
+        <app-songs
+          [id]="songs[1].id"
+          [cover]="songs[1].cover"
+          [title]="songs[1].title"
+          (select)="onSelectSong($event)"
+        />
       </li>
       <li>
-        <app-songs [cover]="songs[2].cover" [title]="songs[2].title" />
+        <app-songs
+          [id]="songs[2].id"
+          [cover]="songs[2].cover"
+          [title]="songs[2].title"
+          (select)="onSelectSong($event)"
+        />
       </li>
       <li>
-        <app-songs [cover]="songs[3].cover" [title]="songs[3].title" />
+        <app-songs
+          [id]="songs[3].id"
+          [cover]="songs[3].cover"
+          [title]="songs[3].title"
+          (select)="onSelectSong($event)"
+        />
       </li>
       <li>
-        <app-songs [cover]="songs[4].cover" [title]="songs[4].title" />
+        <app-songs
+          [id]="songs[4].id"
+          [cover]="songs[4].cover"
+          [title]="songs[4].title"
+          (select)="onSelectSong($event)"
+        />
       </li>
     </ul>
   </main>
+
+  SONG OF THE ARTIST
 </app-song-box>

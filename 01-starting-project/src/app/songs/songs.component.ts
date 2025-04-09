@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, EventEmitter, Input, input, Output } from '@angular/core';
 
 
 @Component({
@@ -10,12 +10,16 @@ import { Component, computed, input } from '@angular/core';
 })
 export class SongsComponent {
   // using signal inputs
+  @Input({required: true}) id!: string;
   cover = input.required<string>();
   title = input.required<string>();
+  @Output() select = new EventEmitter();
 
   imagePath = computed(() => {
     return 'assets/album-covers/' + this.cover();
   });
 
-  onSongClick() {}
+  onSongClick() {
+    this.select.emit(this.id);
+  }
 }

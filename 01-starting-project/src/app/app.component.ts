@@ -13,4 +13,9 @@ import { SongBoxComponent } from "./song-box/song-box.component";
 })
 export class AppComponent {
   songs = SONG_LIST;
+
+  onSelectSong(id: string) {
+    console.log('Selected user with id ' + id)
+    // we pass ($event) to the html: it holds that data/value that was emitted by the event we are listening to.
+  }
 }
