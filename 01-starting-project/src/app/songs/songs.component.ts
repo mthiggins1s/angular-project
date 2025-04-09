@@ -1,5 +1,4 @@
-import { Component, computed, EventEmitter, Input, input, Output, output } from '@angular/core';
-
+import { Component, computed, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-songs',
